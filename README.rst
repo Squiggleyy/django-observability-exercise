@@ -3,17 +3,19 @@ Luke's Quick Instructions
 
 ** Django OpenTelemetry Exercise **
 *Initial Setup:*
-- `git clone https://github.com/open-telemetry/opentelemetry-python.git`
-- `cd opentelemetry-python/docs/examples/django`
-- `python3 -m venv .venv`
-- `source .venv/bin/activate`
-- `pip3 install --upgrade pip`
-- `pip3 install django opentelemetry-sdk opentelemetry-instrumentation-django requests`
-- `export DJANGO_SETTINGS_MODULE=instrumentation_example.settings`
-- `python3 manage.py runserver --noreload`
+.. code-block::
+    - `git clone https://github.com/open-telemetry/opentelemetry-python.git`
+    - `cd opentelemetry-python/docs/examples/django`
+    - `python3 -m venv .venv`
+    - `source .venv/bin/activate`
+    - `pip3 install --upgrade pip`
+    - `pip3 install django opentelemetry-sdk opentelemetry-instrumentation-django requests`
+    - `export DJANGO_SETTINGS_MODULE=instrumentation_example.settings`
+    - `python3 manage.py runserver --noreload`
 
 *Run the client:*
-- `python3 client.py hello`
+.. code-block::
+    - `python3 client.py hello`
 
 
 Original Instruction - Django Instrumentation
