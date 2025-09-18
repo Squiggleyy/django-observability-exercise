@@ -15,7 +15,7 @@ Luke's Quick Instructions
     pip3 install django opentelemetry-sdk opentelemetry-instrumentation-django requests
     export DJANGO_SETTINGS_MODULE=instrumentation_example.settings
 
-*Use this to pipe to Observe:*
+*Use this to pipe to Observe (optional):*
 
 .. code-block::
 
@@ -26,6 +26,8 @@ Luke's Quick Instructions
     export OTEL_EXPORTER_OTLP_HEADERS="Authorization=Bearer ds1rwxLxx1lp7V2Lsz6J:pKCyXwi0gv5njdTKcEw7W3_y7SObAxpP,x-observe-target-package=\"Host Explorer\""
 
 *Run server:*
+
+.. code-block::
 
     python3 manage.py runserver --noreload
 
