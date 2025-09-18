@@ -14,27 +14,27 @@ Luke's Quick Instructions
     pip3 install --upgrade pip
     pip3 install django opentelemetry-sdk opentelemetry-instrumentation-django requests
     export DJANGO_SETTINGS_MODULE=instrumentation_example.settings
+
+*Use this to pipe to Observe:*
+
+.. code-block::
+
+    pip3 install opentelemetry-exporter-otlp
+    export OTEL_SERVICE_NAME=django-demo
+    export OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+    export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT="https://152463139077.collect.observeinc.com/v2/otel"
+    export OTEL_EXPORTER_OTLP_HEADERS="Authorization=Bearer ds1rwxLxx1lp7V2Lsz6J:pKCyXwi0gv5njdTKcEw7W3_y7SObAxpP,x-observe-target-package=\"Host Explorer\""
+
+*Run server:*
+
     python3 manage.py runserver --noreload
 
 *Run the client in separate terminal:*
 
 .. code-block::
 
+    cd opentelemetry-python/docs/examples/django
     python3 client.py hello
-
-*Pipe to Observe:*
-
-.. code-block::
-
-    export OTEL_SERVICE_NAME=django-demo
-    export OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
-    export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT="https://<CUSTOMER_ID>.collect.observeinc.com/v1/traces"
-    export OTEL_EXPORTER_OTLP_HEADERS="Authorization=Bearer <TOKEN>,x-observe-target-package=\"Host Explorer\""
-
-.. code-block::
-
-    export DJANGO_SETTINGS_MODULE=instrumentation_example.settings
-    python3 manage.py runserver --noreload
 
 Original Instruction - Django Instrumentation
 ======================
