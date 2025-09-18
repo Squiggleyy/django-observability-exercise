@@ -16,12 +16,25 @@ Luke's Quick Instructions
     export DJANGO_SETTINGS_MODULE=instrumentation_example.settings
     python3 manage.py runserver --noreload
 
-*Run the client:*
+*Run the client in separate terminal:*
 
 .. code-block::
 
     python3 client.py hello
 
+*Pipe to Observe:*
+
+.. code-block::
+
+    export OTEL_SERVICE_NAME=django-demo
+    export OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+    export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT="https://<CUSTOMER_ID>.collect.observeinc.com/v1/traces"
+    export OTEL_EXPORTER_OTLP_HEADERS="Authorization=Bearer <TOKEN>"
+
+.. code-block::
+
+    export DJANGO_SETTINGS_MODULE=instrumentation_example.settings
+    python3 manage.py runserver --noreload
 
 Original Instruction - Django Instrumentation
 ======================
