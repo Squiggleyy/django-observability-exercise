@@ -23,7 +23,7 @@ Luke's Quick Instructions
     export OTEL_SERVICE_NAME=django-demo
     export OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
     export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT="https://152463139077.collect.observeinc.com/v2/otel"
-    export OTEL_EXPORTER_OTLP_HEADERS="Authorization=Bearer ds1rwxLxx1lp7V2Lsz6J:pKCyXwi0gv5njdTKcEw7W3_y7SObAxpP,x-observe-target-package=\"Host Explorer\""
+    export OTEL_EXPORTER_OTLP_HEADERS="Authorization=Bearer ds1rwxLxx1lp7V2Lsz6J:pKCyXwi0gv5njdTKcEw7W3_y7SObAxpP,x-observe-target-package=\"Tracing\""
 
 *Run server:*
 
