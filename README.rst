@@ -29,7 +29,7 @@ Luke's Quick Instructions
     export OTEL_SERVICE_NAME=django-demo
     export OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
     export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT="https://<CUSTOMER_ID>.collect.observeinc.com/v1/traces"
-    export OTEL_EXPORTER_OTLP_HEADERS="Authorization=Bearer <TOKEN>"
+    export OTEL_EXPORTER_OTLP_HEADERS="Authorization=Bearer <TOKEN>,x-observe-target-package=\"Host Explorer\""
 
 .. code-block::
 
